@@ -10,6 +10,7 @@ while True:
     if escolha == 'i':
         item = input('Digite o item: ')
         lista_compras.append(item)
+continue
     
     if escolha == 'a':
         apagar_item = input('Digite o indice: ')

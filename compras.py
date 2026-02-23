@@ -23,8 +23,6 @@ while True:
     elif escolha == 's':
         break
 
-    else:
-        print('Digite apenas s l, a ou i')
-
+    
 if len(escolha) < 1:
     print('Digite apenas 1 caracter')

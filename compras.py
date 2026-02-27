@@ -9,20 +9,24 @@ while True:
   if escolha == 'i':
         item = input('Digite o item: ')
         lista_compras.append(item)
- try:
-    if escolha == 'a':
+
+  if escolha == 'a':
+    try:
       apagar_item = int(input('Digite o indice: '))
       del lista_compras[apagar_item]
 
- except ValueError:
+    except ValueError:
         print('Digite apenas inteiros!')
- except Exception:
+
+    except IndexError:
+        print('Índicenao existe!')
+
+    except Exception:
         print('Erro desconhecido')
 
   elif escolha == 'l':
       for indice, itens in enumerate(lista_compras):
         print(indice, itens)
-        break
 
   elif escolha == 's':
         break

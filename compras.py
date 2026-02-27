@@ -1,6 +1,7 @@
 escolha = input('Selecione: \
 [i]nserir, [a]pagar, [l]ista, [s]air').lower()
 
+
 lista_compras = []
 
 
@@ -9,12 +10,15 @@ while True:
  
     if escolha == 'i':
         item = input('Digite o item: ')
-        lista_compras.append(item)
-continue
-    
-    if escolha == 'a':
-        apagar_item = input('Digite o indice: ')
-        del lista_compras[apagar_item]
+        lista.append(item)
+    try:
+      if escolha == 'a':
+         apagar_item = input('Digite o indice: ')
+         del lista_compras[apagar_item]
+    except ValueError:
+        print('Digite apenas inteiros!')
+    except Exception:
+        print('Erro desconhecido')
 
     if escolha == 'l':
       for indice, itens in lista_compras:
@@ -24,6 +28,11 @@ continue
     elif escolha == 's':
         break
 
-    
+    else:
+        print('Digite apenas s l, a ou i')
+
 if len(escolha) < 1:
     print('Digite apenas 1 caracter')
+
+
+

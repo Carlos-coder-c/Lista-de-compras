@@ -3,10 +3,10 @@ lista_compras = []
 
 
 while True:
-    escolha = input('Selecione: \
+  escolha = input('Selecione: \
     [i]nserir, [a]pagar, [l]ista, [s]air: ').lower()
  
-    if escolha == 'i':
+  if escolha == 'i':
         item = input('Digite o item: ')
         lista_compras.append(item)
  try:
@@ -19,14 +19,13 @@ while True:
  except Exception:
         print('Erro desconhecido')
 
-    elif escolha == 'l':
+  elif escolha == 'l':
       for indice, itens in enumerate(lista_compras):
         print(indice, itens)
         break
 
-    elif escolha == 's':
+  elif escolha == 's':
         break
-
 
 
 if len(escolha) < 1:

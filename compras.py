@@ -10,11 +10,12 @@ while True:
  
     if escolha == 'i':
         item = input('Digite o item: ')
-        lista.append(item)
+        lista_compras.append(item)
     try:
       if escolha == 'a':
-         apagar_item = input('Digite o indice: ')
+         apagar_item = int(input('Digite o indice: '))
          del lista_compras[apagar_item]
+
     except ValueError:
         print('Digite apenas inteiros!')
     except Exception:
